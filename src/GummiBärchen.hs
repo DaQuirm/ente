@@ -10,7 +10,7 @@ data GummiBärchen = GummiBärchen {
 } deriving (Show)
 
 instance Essbar GummiBärchen where
-  essen bärchen = (show bärchen) ++ " nom nom"
+  essen = (" nom nom" ++) . show
 
 farben :: Farbe -> GummiBärchen -> GummiBärchen
 farben farbe bärchen = bärchen { farbe = farbe }
